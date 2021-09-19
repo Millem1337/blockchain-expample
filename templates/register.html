@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/main-style.css">
+    <title>Blockchain login</title>
+</head>
+<body>
+    <header>
+        <a class="name" href="/">Blockchain</a>
+        <ul class="navigation-bar">
+            <li><a class="login" href="/">Back</a></li>
+        </ul>
+    </header>
+    <br>
+    <br>
+    <br>
+    <div class="login-container">
+        <p class="error">{{ error }}</p>
+        <form action="" method="POST">
+            <p class="sub-name">Your username:</p>
+            <input type="text" name="username">
+            <p class="sub-name">Your surname:</p>
+            <input type="text" name="surname">
+            <p class="sub-name">Your password:</p>
+            <input type="password" name="password">
+            <input type="submit" class="login" value="Register">
+        </form>
+        <br>
+        <br>
+        <a class="login" href="/login">Have account?</a>
+    </div>
+</body>
+</html>

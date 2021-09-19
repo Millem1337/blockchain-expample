@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/main-style.css">
+    <title>Blockchain</title>
+</head>
+<body>
+    <header>
+        <a class="name" href="/">Blockchain</a>
+        <ul class="navigation-bar">
+            <li><a class="login" href="/profile">Profile</a></li>
+        </ul>
+    </header>
+    <div class="card">
+        <p class="sub-name">Name: {{ username }}</p>
+        <p class="sub-name">Surname: {{ surname }}</p>
+        <p class="sub-name">Wallet: {{ wallet }}$</p>
+        <p class="id">Id: {{ id }}</p>
+        <a class="logout" href="/logout">Log out</a>|<a class="logout" href="/transaction">Create transaction</a>
+    </div>
+    <p class="name">Transactions:</p>
+    {% for transaction in transactions %}
+    <div class="card">
+        <p class="sub-name">Transaction id: {{ transaction[0] }}</p>
+        <p class="sub-name">Sender name: {{ transaction[5] }}</p>
+        <p class="sub-name">Receiver name: {{ transaction[4] }}</p>
+        <p class="sub-name">Amount: {{ transaction[6] }}</p>
+    </div>
+    <br>
+    {% endfor %}
+</body>
+</html>

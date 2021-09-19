@@ -1,0 +1,126 @@
+body{
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+    background-color: white;
+}
+
+.navigation-bar{
+    list-style-type: none;
+}
+
+ul{
+    float: right;
+}
+
+.error{
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    color: red;
+}
+
+.successfylly{
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    color: green;
+}
+
+.name{
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+    position: relative;
+    text-decoration: none;
+    float: center;
+    font-family: 'Comfortaa', cursive;
+    transition: 0.3s;
+    cursor: default;
+}
+
+.login{
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 8px 14px;
+    text-decoration: none;
+    float: center;
+    font-family: 'Comfortaa', cursive;
+    transition: 0.3s;
+}
+
+.login:hover{
+    background-color: black;
+    color: white;
+}
+.name:hover{
+    text-shadow: 0px 0px 6px black;
+}
+
+.login-container{
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 18px 12px;
+    margin: auto;
+    width: 15%;
+}
+
+.logout{
+    text-decoration: none;
+    color: black;
+}
+
+.sub-name{
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 35;
+}
+
+.id{
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 15;
+}
+
+input[type=text]{
+    border: none;
+    background-image: url('/static/imgs/password.png');
+    transition: width 0.4s ease-in-out;
+    width: 90px;
+    outline: none;
+    border-bottom: 2px solid gray;
+}
+
+input[type=password] {
+    border: none;
+    background-image: url('/static/imgs/password.png');
+    transition: width 0.4s ease-in-out;
+    width: 90px;
+    outline: none;
+    border-bottom: 2px solid gray;
+}
+
+input[type=text]:focus {
+    width: 150px;
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+input[type=password]:focus {
+    width: 150px;
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.card{
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 8px 14px;
+    text-decoration: none;
+    float: center;
+    font-family: 'Comfortaa', cursive;
+    width: 15%;
+    margin: auto;
+}
