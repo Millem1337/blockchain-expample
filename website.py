@@ -9,14 +9,14 @@ app.config['SECRET_KEY'] = "8g0hBa59Wmsh2MS"
 
 @app.route('/', methods=["POST", "GET"])
 def main_page():
-    if session['name'] is None:
+    if 'name' not in session:
         return render_template('main.html', text="Login")
     else:
         return render_template('main.html', text="Profile")
 
 @app.route('/login', methods=["POST", "GET"])
 def login_page():
-    if session['name'] is not None:
+    if 'name' in session:
         return redirect('/profile')
     elif request.method == "POST":
         username = request.form['username']
@@ -50,7 +50,7 @@ def register_page():
 
 @app.route('/logout')
 def logout_redirect():
-    if session['name'] is not None:
+    if 'name' in session:
         session['name'] = None
         session['password'] = None
         session['surname'] = None
@@ -61,7 +61,7 @@ def logout_redirect():
 
 @app.route('/profile', methods=["POST", "GET"])
 def profile_page():
-    if session['name'] is not None:
+    if 'name' in session:
         username = session['name']
         surname = session['surname']
         password = session['password']
@@ -73,7 +73,7 @@ def profile_page():
 @app.route('/transaction', methods=["POST", "GET"])
 def transaction_form():
     if request.method == "POST":
-        if session['name'] is not None:
+        if 'name' in session:
             username = request.form['username']
             amount = request.form['amount']
             if amount == None or amount == 0:
