@@ -1,8 +1,6 @@
-import requests
 from blockchain import transactions, user
 from flask.app import Flask
 from flask import render_template, request, session, Flask, redirect
-from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "8g0hBa59Wmsh2MS"
